@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class User {
+public abstract class User {
     private String name;
     private BankAccount account;
     private ArrayList<Book> bookList  = new ArrayList<Book>();
@@ -36,11 +36,7 @@ public class User {
         return "Name: " + name + "\nAccount Balance: " + account.getBalance() + "\nBookList: " + s;
     }
 
-    public void setBookList(Book b) {
-        // Leave it here blank for overriding
-    }
-
-    public void promote() {
-        // Leave it here blank for overriding
-    }
+    
+    public abstract void promote();
+    public abstract void setBookList(Book b);
 }
