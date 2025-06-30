@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trade Platform</title>
+</head>
+<body>
+    <h1>Second-Hand Book Trading</h1>
+    <button onclick="fetchHello()">Test API</button>
+    <p id="result"></p>
+
+    <script>
+        function fetchHello() {
+            fetch('/api/hello')
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById('result').innerText = data;
+                });
+        }
+    </script>
+</body>
+</html>
